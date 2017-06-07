@@ -1,6 +1,6 @@
 
 import { User } from '../user';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter,Input } from '@angular/core';
 
 @Component({
   selector: 'app-form-component',
@@ -10,6 +10,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class FormComponentComponent implements OnInit {
   user: User;
   @Output() addUser: EventEmitter<User> = new EventEmitter<User>();
+  @Input() userObj:User;
   constructor() {
     this.user = new User();
   }
@@ -17,10 +18,15 @@ export class FormComponentComponent implements OnInit {
   ngOnInit() {
   }
 
+  example(name:string,last:string){
+
+  }
+
   onSubmit() {
     console.log("user "+JSON.stringify(this.user));
     this.addUser.emit(this.user);
     this.user = new User();
+    this.example('Ashish','sharma');
 
   }
 

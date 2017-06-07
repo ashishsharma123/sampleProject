@@ -8,6 +8,8 @@ import { routes } from './app.routes';
 import { AppComponent } from './app.component';
 import { FormComponentComponent } from './form-component/form-component.component';
 import { ListComponentComponent } from './list-component/list-component.component';
+import { MyFilterPipe } from './my-filter.pipe';
+import { InputComponent } from './input/input.component';
 
 
 
@@ -16,7 +18,9 @@ import { ListComponentComponent } from './list-component/list-component.componen
     AppComponent,
     CustomComponent,
     FormComponentComponent,
-    ListComponentComponent
+    ListComponentComponent,
+    MyFilterPipe,
+    InputComponent
   ],
   imports: [
     BrowserModule,

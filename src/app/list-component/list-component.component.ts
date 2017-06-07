@@ -1,4 +1,5 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
+import { MyFilterPipe } from '../my-filter.pipe';
 
 @Component({
   selector: 'app-list-component',
@@ -6,10 +7,17 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./list-component.component.css']
 })
 export class ListComponentComponent implements OnInit {
-
-  constructor() { }
+  keyword:string='';
+  constructor(
+    
+  ) { }
   @Input() list:Array<any>;
+  @Output() update : EventEmitter<any> = new EventEmitter<any>();
   ngOnInit() {
+  }
+
+  updateData(user){
+
   }
 
 }
