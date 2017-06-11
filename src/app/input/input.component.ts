@@ -8,7 +8,7 @@ import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
 export class InputComponent implements OnInit {
   @Input() placeholder:string;
   @Input() type:string;
-  data:string;
+  data:any;
   @Output() showData: EventEmitter<any> = new EventEmitter<any>();
   constructor() { }
 

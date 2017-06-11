@@ -10,6 +10,7 @@ import { FormComponentComponent } from './form-component/form-component.componen
 import { ListComponentComponent } from './list-component/list-component.component';
 import { MyFilterPipe } from './my-filter.pipe';
 import { InputComponent } from './input/input.component';
+import { FirstDirectiveDirective } from './directive/first-directive.directive';
 
 
 
@@ -20,7 +21,8 @@ import { InputComponent } from './input/input.component';
     FormComponentComponent,
     ListComponentComponent,
     MyFilterPipe,
-    InputComponent
+    InputComponent,
+    FirstDirectiveDirective
   ],
   imports: [
     BrowserModule,

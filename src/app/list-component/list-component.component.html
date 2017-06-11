@@ -1,4 +1,4 @@
-<input type = "text" [(ngModel)]="keyword" placeholder="Search User Here" *ngIf="list && list.length>2"/>
+<input type = "text" [(ngModel)]="keyword" placeholder="Search User Here" *ngIf="list"/>
 <table class="table" style="width: 750px;margin: 0 auto; " *ngIf="list && list.length>0">
   <thead>
     <tr>
@@ -6,11 +6,11 @@
       <th>Description</th>
     </tr>
   </thead>
-  <tbody class="table-hover" >
+  <tbody class="table-hover">
     <tr *ngFor="let user of list | myFilter:keyword">
       <td>{{user._fullName}}</td>
       <td>{{user._description}}</td>
-     <td><input type="button" value="Update"/><td>
+     <td><input type="button" value="Update" class="btn btn-primary"/><td>
     </tr>
   </tbody>
 </table>

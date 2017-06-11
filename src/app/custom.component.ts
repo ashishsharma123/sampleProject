@@ -5,13 +5,7 @@ import { Component,Input } from '@angular/core';
 @Component({
   selector: 'custom-component',
   template: `
-    <app-input placeholder="Enter My Name" type="text" (showData)="showAlert($event)"></app-input>
-    <app-input placeholder="Enter My Last Name" type="text"></app-input>
-    <app-input type="password" (showData)="showAlert($event)"></app-input>
-    <app-input></app-input>
-    <app-input></app-input>
-    <app-input></app-input>
-    <app-input></app-input>
+    
     <app-input></app-input>
     <app-form-component (addUser)="addUserToList($event)" [userObj] = "user"></app-form-component>
     <br>
