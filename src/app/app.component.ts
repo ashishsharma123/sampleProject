@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title:string = 'app';
   constructor(){
-
+    setTimeout(this.doSomething,1000);
+    console.log("after setTimeout");
+    
   }
 
   doSomething(){

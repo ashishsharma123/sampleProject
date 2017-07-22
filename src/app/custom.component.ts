@@ -1,12 +1,12 @@
 import {User} from './user';
-import { Component,Input } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 
 
 @Component({
   selector: 'custom-component',
   template: `
     
-    <app-input></app-input>
+    
     <app-form-component (addUser)="addUserToList($event)" [userObj] = "user"></app-form-component>
     <br>
     <h3>Already Added User !!</h3>
@@ -15,7 +15,7 @@ import { Component,Input } from '@angular/core';
   `,
   
 })
-export class CustomComponent {
+export class CustomComponent{
   title = 'app';
   user:User;
   array:Array<any>=[];
@@ -23,6 +23,7 @@ export class CustomComponent {
   constructor(){
 
   }
+
 
   showAlert(value){
     alert(value);

@@ -1,3 +1,4 @@
+import {HttpModule} from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CustomComponent } from './custom.component';
@@ -11,6 +12,8 @@ import { ListComponentComponent } from './list-component/list-component.componen
 import { MyFilterPipe } from './my-filter.pipe';
 import { InputComponent } from './input/input.component';
 import { FirstDirectiveDirective } from './directive/first-directive.directive';
+import { LoginComponent } from './login/login.component';
+import { LoginActivateService } from './services/login-activate.service';
 
 
 
@@ -22,14 +25,16 @@ import { FirstDirectiveDirective } from './directive/first-directive.directive';
     ListComponentComponent,
     MyFilterPipe,
     InputComponent,
-    FirstDirectiveDirective
+    FirstDirectiveDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     routes,
-    FormsModule      
+    FormsModule,
+    HttpModule      
   ],
-  providers: [],
+  providers: [LoginActivateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

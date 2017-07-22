@@ -7,6 +7,6 @@ export class FirstDirectiveDirective {
     constructor(el: ElementRef, renderer: Renderer) {
         
      // Use renderer to render the element with styles
-       renderer.setElementStyle(el.nativeElement, 'background-color', 'yellow');
+       renderer.setElementStyle(el.nativeElement, 'display', 'none');
     }
 }
